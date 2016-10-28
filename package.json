@@ -1,6 +1,6 @@
 {
   "name": "non-breaking-spaces",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Js module boilerPlate",
   "main": "index.js",
   "scripts": {
