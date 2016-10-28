@@ -6,11 +6,11 @@
   "scripts": {
     "test": "npm run lint && npm run tape",
     "lint": "eslint ./src/",
-    "dist": "webpack --mode=dev && webpack --mode=build",
-    "dev": "webpack --mode=dev --progress --colors --watch",
+    "dist": "webpack",
+    "watch": "webpack --progress --colors --watch",
     "tape": "babel-tape-runner test/**/*.js | tap-diff",
     "doc": "rm -rf docs/* && jsdoc src -d ./docs -R README.md -c jsdoc.conf.json -t ./node_modules/ink-docstrap/template",
-    "build": "npm run test && npm run dist",
+    "build": "npm run dist && npm run doc",
     "prepublish": "npm run dist"
   },
   "repository": {
@@ -23,23 +23,20 @@
     "url": "https://github.com/stephane-tessier/non-breaking-spaces/issues"
   },
   "homepage": "https://github.com/stephane-tessier/non-breaking-spaces#readme",
-  "dependencies": {
+  "devDependencies": {
     "babel-core": "6.18.0",
     "babel-eslint": "7.1.0",
-    "babel-preset-es2015": "6.18.0",
-    "webpack": "1.13.3",
     "babel-loader": "6.2.7",
     "babel-plugin-add-module-exports": "0.2.1",
-    "eslint-loader": "1.6.0",
-    "yargs": "6.3.0"
-  },
-  "devDependencies": {
+    "babel-preset-es2015": "6.18.0",
     "babel-tape-runner": "2.0.1",
     "eslint": "3.8.1",
+    "eslint-loader": "1.6.0",
     "ink-docstrap": "1.3.0",
     "jscs": "3.0.7",
     "jsdoc": "3.4.2",
     "tap-diff": "0.1.1",
-    "tape": "4.6.2"
+    "tape": "4.6.2",
+    "webpack": "1.13.3"
   }
 }
