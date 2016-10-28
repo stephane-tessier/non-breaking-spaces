@@ -1,0 +1,37 @@
+[{
+  "message": "Simple text with a question mark.",
+  "before" : "Lorem ipsum ?",
+  "after"  : "Lorem ipsum&nbsp;?"
+},{
+  "message": "Simple paragraph with a question mark.",
+  "before" : "<p>Lorem ipsum ?</p>",
+  "after"  : "<p>Lorem ipsum&nbsp;?</p>"
+},{
+  "message": "Simple paragraph with an exclamation mark.",
+  "before" : "<p>Lorem ipsum !</p>",
+  "after"  : "<p>Lorem ipsum&nbsp;!</p>"
+},{
+  "message": "Simple paragraph with a colon.",
+  "before" : "<p>Lorem ipsum : sin dolor est.</p>",
+  "after"  : "<p>Lorem ipsum&nbsp;: sin dolor est.</p>"
+},{
+  "message": "Simple paragraph with a semi-colon.",
+  "before" : "<p>Lorem ipsum ; sin dolor est.</p>",
+  "after"  : "<p>Lorem ipsum&nbsp;; sin dolor est.</p>"
+},{
+  "message": "Simple paragraph with 3 questions marks together.",
+  "before" : "<p>Lorem ipsum ???</p>",
+  "after"  : "<p>Lorem ipsum&nbsp;???</p>"
+},{
+  "message": "Simple paragraph with 3 exclamation marks together.",
+  "before" : "<p>Lorem ipsum !!!</p>",
+  "after"  : "<p>Lorem ipsum&nbsp;!!!</p>"
+},{
+  "message": "Simple paragraph with a questions mark and an exclamation mark together.",
+  "before" : "<p>Lorem ipsum ?!</p>",
+  "after"  : "<p>Lorem ipsum&nbsp;?!</p>"
+},{
+  "message": "Several paragraphs with a bit of everything.",
+  "before" : "<p>Lorem ipsum ?</p><p>Sin dolor est !</p><p>Lorem ipsum : sin dolor est ?!</p>",
+  "after"  : "<p>Lorem ipsum&nbsp;?</p><p>Sin dolor est&nbsp;!</p><p>Lorem ipsum&nbsp;: sin dolor est&nbsp;?!</p>"
+}]
