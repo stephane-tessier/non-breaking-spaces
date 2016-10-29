@@ -2,12 +2,12 @@
   "name": "non-breaking-spaces",
   "version": "1.1.0",
   "description": "Js module boilerPlate",
-  "main": "dist/non-breaking-spaces.js",
+  "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run tape",
     "lint": "eslint ./src/",
-    "dist": "webpack",
-    "watch": "webpack --progress --colors --watch",
+    "dist": "babel src/index.js --out-file index.js",
+    "watch": "babel src/index.js --watch --out-file index.js",
     "tape": "babel-tape-runner test/**/*.js | tap-diff",
     "doc": "rm -rf docs/* && jsdoc src -d ./docs -R README.md -c jsdoc.conf.json -t ./node_modules/ink-docstrap/template",
     "build": "npm run dist && npm run doc",
@@ -17,17 +17,20 @@
     "type": "git",
     "url": "git+https://github.com/stephane-tessier/non-breaking-spaces.git"
   },
-  "author": "",
+  "author": "Stéphane Tessier",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stephane-tessier/non-breaking-spaces/issues"
   },
   "homepage": "https://github.com/stephane-tessier/non-breaking-spaces#readme",
   "devDependencies": {
+    "babel": "6.5.2",
+    "babel-cli": "6.18.0",
     "babel-core": "6.18.0",
     "babel-eslint": "7.1.0",
     "babel-loader": "6.2.7",
     "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-es2015-modules-umd": "6.18.0",
     "babel-preset-es2015": "6.18.0",
     "babel-tape-runner": "2.0.1",
     "eslint": "3.8.1",
@@ -36,7 +39,6 @@
     "jscs": "3.0.7",
     "jsdoc": "3.4.2",
     "tap-diff": "0.1.1",
-    "tape": "4.6.2",
-    "webpack": "1.13.3"
+    "tape": "4.6.2"
   }
 }

@@ -9,16 +9,26 @@ The description of the library.
 To install this javascript module.
 
 ```bash
-npm install library
+npm install non-breaking-spaces
 ```
 
 ### Usage
 
-Describe the usage of the library.
+Convert text and HTML so that white spaces before ponctuation are transformed into non-breaking spaces (`&nbsp;`).
 
 ```javascript
-// Add some example code
-var library = require('library');
+// import CommonJS
+var nonBreakingSpaces = require('non-breaking-spaces');
 
-library.foo();
+var text = nonBreakingSpaces.noBreak('Ce texte nécessite une petite correction !');
+// Ce texte nécessite une petite correction&nbsp;!
+```
+
+or with EcmaScript6
+```javascript
+// import ES6 Module
+import {noBreak as nonBreakingSpaces} from 'non-breaking-spaces';
+
+var text = nonBreakingSpaces('Ce texte nécessite une petite correction !');
+// Ce texte nécessite une petite correction&nbsp;!
 ```

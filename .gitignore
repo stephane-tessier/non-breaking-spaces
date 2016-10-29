@@ -1,5 +1,7 @@
 node_modules
 
+# compiled with `npm run doc`
 docs
 
-dist
+# compiled from src/index.js
+index.js
