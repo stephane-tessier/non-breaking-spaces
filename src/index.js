@@ -15,6 +15,9 @@ export function setOptions(key, value) {
 }
 
 export function noBreak(text, optionsOverride) {
+  if (typeof text !== 'string' || !text) {
+    return text;
+  }
   let options = Object.assign({}, defaultOptions, optionsOverride);
 
   return text.replace(/ ([?!:;])/g, options.replacer + '$1');

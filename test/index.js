@@ -2,6 +2,14 @@ import test from 'tape';
 import expected from './expected';
 import { noBreak, setOptions } from '../src/index';
 
+// Basic tests with empty inputs
+test('No input tests', (t) => {
+  t.equal(noBreak(undefined), undefined, 'Undefined.');
+  t.equal(noBreak(''), '', 'Empty string.');
+
+  t.end();
+});
+
 // Read all the tests from `expected.json` and run them
 test('Main tests', (t) => {
   t.plan(expected.length);
@@ -13,6 +21,7 @@ test('Main tests', (t) => {
   t.end();
 });
 
+// Tests with different replacer
 test('Options tests', (t) => {
 
   setOptions('replacer', '&#160;');
